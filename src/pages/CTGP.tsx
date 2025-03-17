@@ -1,5 +1,4 @@
-import { GradientPrimaryHeader } from "../components/PrimaryHeader"
-import hero from "../assets/ctgp-hero.png"
+import { SolidPrimaryHeader } from "../components/PrimaryHeader"
 import { PrimaryDescription } from "../components/Description"
 import one from "../assets/customize_training.png"
 import two from "../assets/government.png"
@@ -62,28 +61,20 @@ const CTGP = () => {
 
     return (
         <div>
-            <div className="h-screen py-20 flex flex-col gap-0 lg:gap-10 mb-40">
-                <div className="flex flex-col lg:flex-row items-center">
-                    <div className="flex-1 flex items-center justify-center">
-                        <div className="text-center lg:text-left lg:w-[60%] pb-10">
-                            <GradientPrimaryHeader content="Corporate Training & Government Partnerships" />
-                        </div>
-                    </div>
-                    <div className="flex-1 flex justify-end pt-20">
-                        <img src={hero} alt="people in a meeting" />
+            <div className="h-screen relative">
+                <div className={` bg-[url("/corporate.jpg")] bg-cover bg-center h-[80%] w-full relative flex items-center`}>
+                    <div className="w-[80%] lg:w-[40%] ml-[10%] text-center md:text-left">
+                        <SolidPrimaryHeader color="text-white text-balance" content="Corporate Training & Government Partnerships" />
                     </div>
                 </div>
-
-                <div className="relative w-full mt-32">
-                    <div className="bg-gradient lg:w-[80%] xl:w-[60%] lg:absolute p-10 lg:rounded-3xl xl:left-[12%] lg:bottom-[5%] xl:bottom-[10%]
-                0">
-                        <PrimaryDescription color="text-white text-justify"
-                            description="TREDLE HUB Learning and Innovation Center collaborates with enterprises 
-                    and government agencies to deliver customized training programs, workforce development 
-                    initiatives, and industry-recognized certifications tailored to organizational needs. 
-                    Through B2B solutions, bulk enrollment, and an employee certification tracking dashboard, 
-                    we help businesses and government institutions enhance workforce skills, maintain compliance, 
-                    and stay competitive in IT, AI, and cybersecurity advancements."/>
+                <div className="bg-gradient w-full md:w-[80%] mx-auto flex items-center justify-center md:rounded-3xl p-10 md:absolute md:bottom-16 lg:bottom-25 left-0 right-0">
+                    <div className="mx-auto">
+                        <PrimaryDescription color="text-white text-justify lg:text-left" description="TREDLE HUB Learning and Innovation 
+                        Center collaborates with enterprises and government agencies to deliver customized training programs, workforce 
+                        development initiatives, and industry-recognized certifications tailored to organizational needs. Through B2B 
+                        solutions, bulk enrollment, and an employee certification tracking dashboard, we help businesses and government 
+                        institutions enhance workforce skills, maintain compliance, and stay competitive in IT, AI, and cybersecurity 
+                        advancements."/>
                     </div>
                 </div>
             </div>
@@ -92,7 +83,7 @@ const CTGP = () => {
                 <div className="flex flex-wrap justify-center gap-5">
                     {
                         cardDetails?.map(item => (
-                            <div className="flex justify-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+                            <div key={item.title} className="flex justify-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
                                 <Cards
                                     key={item.title}
                                     alt={item.alt}

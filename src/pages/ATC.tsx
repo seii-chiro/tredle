@@ -3,6 +3,7 @@ import { TitleGradient } from "../components/Titles"
 import actcman from "../assets/atcman.png"
 import actgirl from "../assets/atcgirl.png"
 import Scroll from "../components/Scroll"
+import { SolidPrimaryHeader } from "../components/PrimaryHeader"
 
 const GroupL = ({ image, title, description }: { image: string, title: string, description: string }) => {
     return (
@@ -38,8 +39,12 @@ const ATC = () => {
             <Scroll />
             <div>
                 <div className="h-screen relative">
-                    <div className={` bg-[url("/ATC.png")] bg-cover bg-center h-[80%] w-full relative`}></div>
-                    <div className="bg-gradient w-[80%] mx-auto flex items-center justify-center rounded-3xl p-10 absolute bottom-25 left-0 right-0">
+                    <div className={` bg-[url("/ATC.png")] bg-cover bg-center h-[80%] w-full relative flex items-center`}>
+                        <div className="w-[80%] lg:w-[40%] ml-[10%] text-center md:text-left">
+                            <SolidPrimaryHeader color="text-white text-balance" content="Authorized Testing Center (ATC) Services" />
+                        </div>
+                    </div>
+                    <div className="bg-gradient w-full md:w-[80%] mx-auto flex items-center justify-center md:rounded-3xl p-10 md:absolute md:bottom-16 lg:bottom-25 left-0 right-0">
                         <div className="mx-auto">
                             <PrimaryDescription color="text-white text-justify lg:text-left" description="TREDLE HUB Learning and Innovation Center serves as an **official testing center,** 
                     providing **on-site certification exams** in a **secure, high-speed environment** with **AI-proctored monitoring** to ensure 
@@ -49,7 +54,7 @@ const ATC = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex items-center justify-center pt-10 pb-20">
+                <div className="w-full flex items-center justify-center pt-80 md:pt-10 pb-20">
                     <div className="w-[80%] flex flex-col gap-20">
                         <GroupL
                             image={actcman}

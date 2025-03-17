@@ -14,13 +14,15 @@ import Certification from "./pages/Certification"
 import Enrollment from "./pages/Enrollment"
 import Training_Delivery from "./pages/Training_Delivery"
 import Faculty from "./pages/Faculty"
+import Training_Categories from "./pages/Training_Categories"
+import NotFound from "./pages/NotFound"
 
 function App() {
 
   const router = createBrowserRouter([
     {
       path: "*",
-      element: <div>404 ☠️</div>
+      element: <NotFound />
     },
     {
       path: "/",
@@ -57,6 +59,10 @@ function App() {
         {
           path: "programs/faculty-and-certified-training-instructor",
           element: <Faculty />
+        },
+        {
+          path: "programs/training-categories",
+          element: <Training_Categories />
         },
         {
           path: "programs/certification-programs",

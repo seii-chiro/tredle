@@ -2,10 +2,10 @@ import Scroll from "../components/Scroll"
 import { BaseDescription, PrimaryDescription } from "../components/Description";
 import { GradientPrimaryHeader, SolidPrimaryHeader } from "../components/PrimaryHeader";
 import { BorderedTitleGradient, TitleGradient } from "../components/Titles";
-import lobby from "../assets/Tambuli.png"
+import lobby from "../assets/lobby.png"
 import nerd from "../assets/nerd.png"
 import { HistoryCardR, HistoryCardL } from "../components/HistoryCards";
-import capitol from "../assets/capitol.png"
+import capitol from "../assets/aklan.png"
 import laptop from "../assets/laptop.png"
 import target from "../assets/target.png"
 import vision from "../assets/vision.png"
@@ -59,8 +59,21 @@ const About = () => {
     <>
       <Scroll />
       <div>
-        <div className={`bg-[url("/about_hero.png")] bg-contain bg-no-repeat bg-center h-[92vh] w-full relative flex justify-center items-center`}>
+        <div className={`bg-[url("/about_hero.png")] bg-contain bg-no-repeat bg-center h-[92vh] w-full relative hidden md:flex justify-center items-center`}>
           <div className="w-[90%] lg:w-[70%] text-justify lg:text-center absolute bottom-14">
+            <PrimaryDescription description="TREDLE HUB Learning and Innovation Center empowers **professionals, businesses, 
+          entrepreneurs,  and students in Aklan and neighboring provinces** with **globally recognized certifications 
+          and industry relevant skills** through **Accredited programs, partnerships with global testing centers like 
+          Prometric,  and strategically located facilities in Quezon City and Kalibo, Aklan,** ensuring they stay 
+          competitive in  today’s technology-driven world."/>
+          </div>
+        </div>
+
+        <div className="h-[92vh] w-full relative flex flex-col justify-center items-center md:hidden mb-30 mt-20">
+          <div>
+            <img src="/about_hero.png" alt="tredle hub logo with circular background" />
+          </div>
+          <div className="w-[90%] lg:w-[70%] text-justify lg:text-center ">
             <PrimaryDescription description="TREDLE HUB Learning and Innovation Center empowers **professionals, businesses, 
           entrepreneurs,  and students in Aklan and neighboring provinces** with **globally recognized certifications 
           and industry relevant skills** through **Accredited programs, partnerships with global testing centers like 
@@ -117,8 +130,8 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center py-30">
-          <div className="w-[85%] flex gap-30 items-center flex-col lg:flex-row">
+        <div className="flex items-center lg:items-end justify-center lg::justify-end py-30">
+          <div className="w-[85%] lg:w-[90%] flex gap-30 items-center flex-col lg:flex-row">
             <div className="flex-1 flex flex-col gap-10 xl:gap-16">
               <TitleGradient title="Strategically Located to Serve Industry and Workforce Needs" />
               <BaseDescription
@@ -135,18 +148,19 @@ const About = () => {
             and training closer to the local community,** helping **Aklanons and neighboring provinces** gain access to **career-enhancing programs** 
             without the need to relocate. By fostering **local  talent development and economic growth, TREDLE HUB** plays a crucial role 
             in preparing individuals  and organizations for the **future of work.**"/>
+
+              <BaseDescription
+                xtraStyles="text-justify"
+                description="**Whether you are an individual looking to upskill, a business seeking to train your workforce, 
+            or an  organization aiming for technological advancement, TREDLE HUB is your trusted partner in  professional growth and 
+            innovation.**"/>
             </div>
 
             <div className="flex-1 flex items-center justify-center">
-              <div className="w-[90%] flex flex-col gap-10">
+              <div className="w-full flex flex-col gap-10">
                 <div className="w-full">
                   <img src={lobby} alt="Tambuli Labs Lobby" className="w-full" />
                 </div>
-                <BaseDescription
-                  xtraStyles="text-justify"
-                  description="**Whether you are an individual looking to upskill, a business seeking to train your workforce, 
-            or an  organization aiming for technological advancement, TREDLE HUB is your trusted partner in  professional growth and 
-            innovation.**"/>
               </div>
             </div>
           </div>
@@ -191,8 +205,8 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center py-40">
-          <div id="background-history" className="w-[75%] py-10 scroll-mt-16">
+        <div className="flex flex-col items-center justify-center pb-20 lg:py-40">
+          <div id="background-history" className="w-[80%] lg:w-[75%] py-10 scroll-mt-16">
             <GradientPrimaryHeader content="History" />
           </div>
 
@@ -212,7 +226,7 @@ const About = () => {
 
             <HistoryCardR
               image={capitol}
-              alt="image of a laptop"
+              alt="image of Aklan Provincial Capitol"
               description="As someone **born, raised, and educated in Kalibo,** it has always been a **lifelong dream** to establish a  
               **learning and innovation center** that directly benefits the local community. We believe that by  providing **accessible, 
               world-class training,** we can help businesses **enhance workforce capabilities,**  empower professionals to **advance their 
@@ -241,13 +255,18 @@ const About = () => {
         <div className="w-full flex items-center justify-center py-20">
           <div id="mission" className="w-[80%] flex items-center gap-10 justify-center flex-col lg:flex-row py-2 lg:py-20 scroll-mt-16">
             <div className="flex-1 flex flex-col gap-10 w-[90%]">
-              <BorderedTitleGradient title="Mission" />
+              <div className="flex items-center gap-4">
+                <BorderedTitleGradient title="Mission" />
+                <div className="flex-1 flex lg:hidden items-center">
+                  <img src={target} alt="target with an arrow icon" className="w-10 h-auto object-contain" />
+                </div>
+              </div>
               <BaseDescription xtraStyles="text-justify lg:text-left" description="To empower individuals with the skills and certifications needed to thrive 
             in the modern technology driven world by providing innovative training programs, accredited education, 
             and globally aligned  assessments."
               />
             </div>
-            <div className="flex-1 flex items-center justify-center">
+            <div className="flex-1 hidden lg:flex items-center justify-center">
               <img src={target} alt="target with an arrow icon" className="" />
             </div>
           </div>
@@ -256,14 +275,19 @@ const About = () => {
         <div id="vision" className="w-full flex items-center justify-center scroll-mt-16">
           <div className="w-[80%] flex flex-col lg:flex-row-reverse gap-10 items-center justify-center py-2 lg:py-20">
             <div className="flex-1 flex flex-col gap-10 w-[90%]">
-              <BorderedTitleGradient title="Vision" />
+              <div className="flex items-center gap-4">
+                <BorderedTitleGradient title="Vision" />
+                <div className="flex-1 flex lg:hidden items-center">
+                  <img src={vision} alt="eye" className="w-10 h-auto object-contain" />
+                </div>
+              </div>
               <BaseDescription xtraStyles="text-justify lg:text-center" description="To be the leading hub for innovative learning and certification, empowering individuals and  
               organizations to excel in a technology-driven world through cutting-edge education, partnerships, and  
               transformative training experiences."
               />
             </div>
-            <div className="flex-1 flex items-center justify-center">
-              <img src={vision} alt="eye" className="" />
+            <div className="flex-1 hidden lg:flex items-center justify-center">
+              <img src={vision} alt="eye" />
             </div>
           </div>
         </div>
@@ -271,8 +295,13 @@ const About = () => {
         <div id="values" className="w-full flex items-center justify-center scroll-mt-16">
           <div className="w-[80%] flex items-center justify-center gap-10 flex-col lg:flex-row py-20">
             <div className="flex-1 flex flex-col gap-10 w-[90%]">
-              <BorderedTitleGradient title="Values" />
-              <ul className="flex flex-col gap-1">
+              <div className="flex items-center gap-4">
+                <BorderedTitleGradient title="Vision" />
+                <div className="flex-1 flex lg:hidden items-center">
+                  <img src={values} alt="diamond icon" className="w-8 h-auto object-contain" />
+                </div>
+              </div>
+              <ul className="flex flex-col gap-4">
                 {
                   valuesList?.map(item => (
                     <BulletedList key={item.title} color="text-black" title={item.title} description={item.description} />
@@ -280,13 +309,13 @@ const About = () => {
                 }
               </ul>
             </div>
-            <div className="flex-1 flex items-center justify-center">
+            <div className="flex-1 hidden lg:flex items-center justify-center">
               <img src={values} alt="diamond" className="" />
             </div>
           </div>
         </div>
 
-        <div id="training-philosophy" className="w-full py-30 scroll-mt-16">
+        <div id="training-philosophy" className="w-full pt-10 pb-30 scroll-mt-16">
           <div className="flex flex-col lg:flex-row">
             <div className="flex-1 w-full flex items-center justify-center">
               <img src={training} alt="people working in the office" className="w-full lg:rounded-r-3xl" />

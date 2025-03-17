@@ -1,8 +1,13 @@
-import tredlehubLogoV3 from "../assets/logo_tredle-hub3.png"
+import tredlehubLogoV3 from "../assets/logo_w_label.png"
 import { BsTelephoneFill } from "react-icons/bs";
 import { BiSolidEnvelope } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router";
+import { FaFacebookF } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaViber } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaSignalMessenger } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -10,18 +15,52 @@ const Footer = () => {
       <div className="min-h-[30dvh] flex flex-col bg-[#F5F5F5] w-full">
         <div className="flex flex-[3] flex-col md:flex-row w-full gap-10 lg:gap-20">
 
-          <section className="flex-2 lg:flex-1 flex items-center justify-center">
-            <img src={tredlehubLogoV3} alt="tredle hub logo" />
+          <section className="flex-2 lg:flex-1 gap-2 flex flex-col items-center justify-center">
+            <div>
+              <img src={tredlehubLogoV3} alt="tredle hub logo" />
+            </div>
+            <section className="flex items-center justify-center">
+              <ul className="flex items-center justify-center gap-1">
+                <li className="bg-[#82160B] rounded-full p-2 text-white hover:bg-[#A91F10] transition-colors">
+                  <Link to={"#"}>
+                    <FaFacebookF className="hover:text-white" />
+                  </Link>
+                </li>
+                <li className="bg-[#82160B] rounded-full p-2 text-white hover:bg-[#A91F10] transition-colors">
+                  <Link to={"#"}>
+                    <FaYoutube className="hover:text-white" />
+                  </Link>
+                </li>
+                <li className="bg-[#82160B] rounded-full p-2 text-white hover:bg-[#A91F10] transition-colors">
+                  <Link to={"#"}>
+                    <FaViber className="hover:text-white" />
+                  </Link>
+                </li>
+                <li className="bg-[#82160B] rounded-full p-2 text-white hover:bg-[#A91F10] transition-colors">
+                  <Link to={"#"}>
+                    <FaWhatsapp className="hover:text-white" />
+                  </Link>
+                </li>
+                <li className="bg-[#82160B] rounded-full p-2 text-white hover:bg-[#A91F10] transition-colors">
+                  <Link to={"#"}>
+                    <FaSignalMessenger className="hover:text-white" />
+                  </Link>
+                </li>
+              </ul>
+
+            </section>
           </section>
 
           <div className="flex-2 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 px-10">
 
-            <section className="flex flex-[1.5] flex-col gap-4 lg:items-center justify-center p-5 w-full">
-              <h4 className="w-full text-center lg:pl-20 md:text-left h-[30%] font-bold">Connect with us</h4>
+            <section className="flex flex-[1.5] flex-col gap-4 justify-center p-5 w-full">
+              <div className="h-[30%] w-full flex item-center justify-center sm:justify-start">
+                <h4 className="font-bold">Connect with us</h4>
+              </div>
               <div className="flex flex-col gap-2 h-[70%]">
                 <div className="flex gap-3 items-center">
                   <BsTelephoneFill />
-                  <p>+63 995 539 2499 | +63 995 539 2500</p>
+                  <p className="text-balance">+63 995 539 2499 | +63 995 539 2500</p>
                 </div>
                 <div className="flex gap-3 items-center">
                   <BiSolidEnvelope />
@@ -38,7 +77,7 @@ const Footer = () => {
 
             <section className="flex-1 flex items-center md:items-start lg:items-center justify-center w-full h-full p-5">
               <div className="flex flex-col items-center lg:items-center justify-center w-full h-full">
-                <h4 className="text-center md:text-left w-full text-nowrap h-[30%] font-bold">Quick Links</h4>
+                <h4 className="text-center md:text-left w-full text-nowrap h-[30%] font-bold pb-5 md:pb-0">Quick Links</h4>
                 <div className="w-full h-[70%]">
                   <ul className="grid grid-cols-2 md:grid-cols-1 text-center md:text-left gap-1">
                     <li><Link to={"/programs/certification-programs"}>Courses</Link></li>

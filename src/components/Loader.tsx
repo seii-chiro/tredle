@@ -8,7 +8,7 @@ const Loader = () => {
                 <div className="absolute inset-0 bg-gradient bg-opacity-70 rounded-full ripple-inner"></div>
                 <div className="relative flex justify-center items-center w-full h-full rounded-full overflow-hidden bg-white z-10">
                     <img
-                        className="w-25 h-25 rounded-full object-cover ripple-image"
+                        className="w-20 h-20 rounded-full object-contain ripple-image"
                         src={tredle_logo_small}
                         alt="Tredle Logo"
                     />

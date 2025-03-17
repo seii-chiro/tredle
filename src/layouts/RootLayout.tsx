@@ -29,7 +29,7 @@ const RootLayout = () => {
             {
                 showLoader ? <Loader /> : (
                     <div className="w-full h-full relative">
-                        <header className="flex items-center w-full justify-between sticky top-0 h-16 lg:h-20 px-4 lg:10 xl:px-20 shadow-sm bg-[#ffffff2a] backdrop-blur-3xl z-[1000]">
+                        <header className="flex items-center w-full justify-between sticky top-0 h-16 lg:h-20 px-4 lg:10 xl:px-20 shadow-sm bg-white/50 backdrop-blur-3xl z-[1000]">
                             <div>
                                 <img src={tredle_logo} className='w-50 hidden lg:block' />
                                 <img src={tredle_logo_small} className='pl-[20%] w-16 lg:hidden' />

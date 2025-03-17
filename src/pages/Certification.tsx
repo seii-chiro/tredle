@@ -1,7 +1,9 @@
-import Construction from '../assets/under_construction (2).png'
+import Construction from '../assets/Resources/undeconstruction.jpg'
+import Scroll from '../components/Scroll'
 const Certification = () => {
   return (
     <div>
+      <Scroll />
       <div className="flex mt-10 flex-col items-center justify-center">
         <div className='text-center flex flex-col gap-5 md:gap-10 mx-5 md:mx-10'>
           <h1 className="bg-gradient-to-r font-extrabold text-transparent bg-clip-text from-[#1E365C] via-[#2F183E] to-[#801811] text-[2rem]">

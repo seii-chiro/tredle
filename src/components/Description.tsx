@@ -2,12 +2,15 @@ type PrimaryDescriptionProps = {
     id?: string
     description: string
     color?: string
+    xtraStyle?: string
 }
 
 type SecondaryDescriptionProps = {
     id?: string
     description: string
     color?: string
+    xtraStyle?: string
+
 }
 
 type BaseDescriptionProps = {
@@ -23,12 +26,12 @@ type ThirdDescriptionProps = {
     description: string
 }
 
-export const PrimaryDescription = ({ description, id, color }: PrimaryDescriptionProps) => {
+export const PrimaryDescription = ({ description, id, color, xtraStyle }: PrimaryDescriptionProps) => {
     const parts = description?.split(/(\*\*[^*]+\*\*)/g)
 
     return (
         <div id={id} className={`text-[1.25rem] scroll-mt-36 ${color}`}>
-            <p>
+            <p className={`${xtraStyle}`}>
                 {parts?.map((part, index) =>
                     part.startsWith('**') && part.endsWith('**') ? (
                         <b key={index}>{part?.slice(2, -2)}</b>
@@ -41,12 +44,12 @@ export const PrimaryDescription = ({ description, id, color }: PrimaryDescriptio
     )
 }
 
-export const SecondaryDescription = ({ description, id, color }: SecondaryDescriptionProps) => {
+export const SecondaryDescription = ({ description, id, color, xtraStyle }: SecondaryDescriptionProps) => {
     const parts = description?.split(/(\*\*[^*]+\*\*)/g)
 
     return (
         <div id={id} className={`text-[1.5rem] scroll-mt-36 ${color}`}>
-            <p>
+            <p className={`${xtraStyle}`}>
                 {parts?.map((part, index) =>
                     part.startsWith('**') && part.endsWith('**') ? (
                         <b key={index}>{part?.slice(2, -2)}</b>

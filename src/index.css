@@ -27,7 +27,11 @@ a.active {
 }
 
 footer a {
-    @apply hover:text-[#333];
+    @apply hover:text-[#1E365D];
+}
+
+@theme {
+    --text-md: 16px;
 }
 
 @layer utilities {
@@ -53,19 +57,17 @@ footer a {
     }
 }
 
-
 @keyframes logoPulse {
     0% {
-        transform: scale(0.9);
+        transform: scale(0.7);
     }
     50% {
-        transform: scale(1.05);
+        transform: scale(0.8);
     }
     100% {
-        transform: scale(0.9);
+        transform: scale(0.7);
     }
 }
-
 
 @keyframes rippleInner {
     0% {
@@ -78,7 +80,6 @@ footer a {
     }
 }
 
-
 @keyframes rippleOuter {
     0% {
         transform: scale(1);
@@ -88,6 +89,19 @@ footer a {
         transform: scale(3.5);
         opacity: 0;
     }
+}
+
+@keyframes roll {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateX(95vw) rotate(1440deg);
+    }
+}
+
+.tumbleweed {
+    animation: roll 10s linear forwards;
 }
 
 .ripple-image {
@@ -100,5 +114,5 @@ footer a {
 
 .ripple-outer {
     animation: rippleOuter 1.5s ease-out infinite;
-    animation-delay: 0.4s; 
+    animation-delay: 0.4s;
 }

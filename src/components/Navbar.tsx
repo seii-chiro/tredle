@@ -237,7 +237,7 @@ export const WideNavbar = () => {
                                             >
                                                 <Link
                                                     className={`flex items-center justify-between ${trainingCategoriesIsHovered && 'navy-blue-text'} ${activeTrainingOption && 'font-bold navy-blue-text'}`}
-                                                    to="/programs#training-categories"
+                                                    to="/programs/training-categories"
                                                     onMouseEnter={() => {
                                                         setTrainingCategoriesIsHovered(true)
                                                     }}
@@ -251,7 +251,7 @@ export const WideNavbar = () => {
                                                             // Why? IDK 🙂
                                                             const firstLink =
                                                                 document.querySelector(
-                                                                    'a[href="/programs#it-and-software-development"]'
+                                                                    'a[href="/programs/training-categories#it-and-software-development"]'
                                                                 ) as HTMLAnchorElement
                                                             if (firstLink) {
                                                                 firstLink.focus()
@@ -389,7 +389,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#it-and-software-development"
+                                                                to="/programs/training-categories#it-and-software-development"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'IT & Software Development' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -408,7 +408,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#ai-and-ml"
+                                                                to="/programs/training-categories#ai-and-ml"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'Artificial Intelligence & Machine Learning' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -428,7 +428,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#data-science-and-analytics"
+                                                                to="/programs/training-categories#data-science-and-analytics"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'Data Science & Analytics' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -447,7 +447,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#erp-and-business-solution"
+                                                                to="/programs/training-categories#erp-and-business-solution"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'ERP & Business Solutions' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -466,7 +466,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#digital-forensics-and-investigation"
+                                                                to="/programs/training-categories#digital-forensics-and-investigation"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'Digital Forensics & Investigation' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -485,7 +485,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#cybersecurity-and-ethical-hacking"
+                                                                to="/programs/training-categories#cybersecurity-and-ethical-hacking"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'Cybersecurity & Ethical Hacking' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -508,7 +508,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#cloud-computing-and-devops"
+                                                                to="/programs/training-categories#cloud-computing-and-devops"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'Cloud Computing & DevOps' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -527,7 +527,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#project-management-and-agile-frameworks"
+                                                                to="/programs/training-categories#project-management-and-agile-frameworks"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'Project Management & Agile Frameworks' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -547,7 +547,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#digital-marketing"
+                                                                to="/programs/training-categories#digital-marketing"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'Digital Marketing' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -566,7 +566,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#space-technologies"
+                                                                to="/programs/training-categories#space-technologies"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'Space Technologies' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -585,7 +585,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#uxs"
+                                                                to="/programs/training-categories#uxs"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'Unmanned Systems (UxS)' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -604,7 +604,7 @@ export const WideNavbar = () => {
                                                                         ? 0
                                                                         : -1
                                                                 }
-                                                                to="/programs#intelligence-gathering-systems"
+                                                                to="/programs/training-categories#intelligence-gathering-systems"
                                                                 className={`flex items-center gap-3 ${activeTrainingOption === 'Intelligence Gathering Systems' && 'font-bold navy-blue-text'}`}
                                                                 onClick={() => {
                                                                     setActiveTrainingOption(
@@ -944,7 +944,7 @@ export const MobileNavbar = () => {
                                             <div className="flex items-center gap-1 h-full w-full">
                                                 <Link
                                                     className={`block h-full w-full py-2 pl-10 ${activeDropdown === 'Training Categories' && 'navy-blue-text font-bold'}`}
-                                                    to={'/programs#training-categories'}
+                                                    to={'/programs/training-categories'}
                                                     onClick={() => {
                                                         setActiveTab('programs')
                                                         setActiveDropdown('Training Categories')
@@ -983,7 +983,7 @@ export const MobileNavbar = () => {
                                                     <ul>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#it-and-software-development"
+                                                                to="/programs/training-categories#it-and-software-development"
                                                                 className={`${activeTrainingCategoryOption === 'IT & Software Development' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1003,7 +1003,7 @@ export const MobileNavbar = () => {
                                                         </li>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#ai-and-ml"
+                                                                to="/programs/training-categories#ai-and-ml"
                                                                 className={`${activeTrainingCategoryOption === 'Artificial Intelligence & Machine Learning' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1024,7 +1024,7 @@ export const MobileNavbar = () => {
                                                         </li>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#data-science-and-analytics"
+                                                                to="/programs/training-categories#data-science-and-analytics"
                                                                 className={`${activeTrainingCategoryOption === 'Data Science & Analytics' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1044,7 +1044,7 @@ export const MobileNavbar = () => {
                                                         </li>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#erp-and-business-solution"
+                                                                to="/programs/training-categories#erp-and-business-solution"
                                                                 className={`${activeTrainingCategoryOption === 'ERP & Business Solutions' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1064,7 +1064,7 @@ export const MobileNavbar = () => {
                                                         </li>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#digital-forensics-and-investigation"
+                                                                to="/programs/training-categories#digital-forensics-and-investigation"
                                                                 className={`${activeTrainingCategoryOption === 'Digital Forensics & Investigation' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1084,7 +1084,7 @@ export const MobileNavbar = () => {
                                                         </li>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#cybersecurity-and-ethical-hacking"
+                                                                to="/programs/training-categories#cybersecurity-and-ethical-hacking"
                                                                 className={`${activeTrainingCategoryOption === 'Cybersecurity & Ethical Hacking' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1106,7 +1106,7 @@ export const MobileNavbar = () => {
                                                     <ul>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#cloud-computing-and-devops"
+                                                                to="/programs/training-categories#cloud-computing-and-devops"
                                                                 className={`${activeTrainingCategoryOption === 'Cloud Computing & DevOps' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1126,7 +1126,7 @@ export const MobileNavbar = () => {
                                                         </li>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#project-management-and-agile-frameworks"
+                                                                to="/programs/training-categories#project-management-and-agile-frameworks"
                                                                 className={`${activeTrainingCategoryOption === 'Project Management & Agile Frameworks' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1147,7 +1147,7 @@ export const MobileNavbar = () => {
                                                         </li>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#digital-marketing"
+                                                                to="/programs/training-categories#digital-marketing"
                                                                 className={`${activeTrainingCategoryOption === 'Digital Marketing' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1167,7 +1167,7 @@ export const MobileNavbar = () => {
                                                         </li>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#space-technologies"
+                                                                to="/programs/training-categories#space-technologies"
                                                                 className={`${activeTrainingCategoryOption === 'Space Technologies' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1187,7 +1187,7 @@ export const MobileNavbar = () => {
                                                         </li>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#uxs"
+                                                                to="/programs/training-categories#uxs"
                                                                 className={`${activeTrainingCategoryOption === 'Unmanned Systems (UxS)' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(
@@ -1207,7 +1207,7 @@ export const MobileNavbar = () => {
                                                         </li>
                                                         <li className="hover:bg-gray-300 p-2">
                                                             <Link
-                                                                to="/programs#intelligence-gathering-systems"
+                                                                to="/programs/training-categories#intelligence-gathering-systems"
                                                                 className={`${activeTrainingCategoryOption === 'Intelligence Gathering Systems' && 'navy-blue-text font-bold'}`}
                                                                 onClick={() => {
                                                                     setMobileNavOpen(

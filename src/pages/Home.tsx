@@ -10,7 +10,7 @@ import MarqueeCarousel from "../components/MarqueeCarousel"
 const Card = ({ content }: { content: string }) => {
     return (
         <div>
-            <div className="bg-gradient flex justify-center items-center text-center text-balance text-xl font-semibold p-5 text-white rounded h-40 w-80">
+            <div className="bg-gradient flex justify-center items-center text-center text-balance text-xl font-semibold p-5 text-white rounded-3xl h-40 w-80">
                 <p>{content}</p>
             </div>
         </div>
@@ -53,9 +53,9 @@ const Home = () => {
                     </div>
                     <div className="w-full items-center justify-center flex absolute bottom-20 lg:bottom-30">
                         <ul className="flex gap-5 flex-col md:flex-row">
-                            <li className="bg-navy-blue text-white px-4 py-1 rounded-3xl"><Link to={"/programs/certification-programs"}>Explore Courses</Link></li>
-                            <li className="bg-navy-blue text-white px-4 py-1 rounded-3xl"><Link to={"/programs#training-categories"}>Become Certified</Link></li>
-                            <li className="bg-navy-blue text-white px-4 py-1 rounded-3xl"><Link to={"/contact-us"}>Connect with Us</Link></li>
+                            <li className="bg-navy-blue text-white px-4 py-1 rounded-3xl flex items-center justify-center"><Link to={"/programs/certification-programs"}>Explore Courses</Link></li>
+                            <li className="bg-navy-blue text-white px-4 py-1 rounded-3xl flex items-center justify-center"><Link to={"/programs#training-categories"}>Become Certified</Link></li>
+                            <li className="bg-navy-blue text-white px-4 py-1 rounded-3xl flex items-center justify-center"><Link to={"/contact-us"}>Connect with Us</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ const Home = () => {
 
                 <div className="flex flex-col lg:flex-row items-center py-16">
                     <div className="flex-1 flex flex-col gap-8 mx-[5%]">
-                        <TitleGradient title="Why Choose Us" />
+                        <TitleGradient title="Why Choose Us?" />
                         <BaseDescription
                             xtraStyles="text-justify lg:text-left"
                             id="why-choose-us"

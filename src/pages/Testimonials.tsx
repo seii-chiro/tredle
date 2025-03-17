@@ -1,10 +1,12 @@
 import { GradientPrimaryHeader } from '../components/PrimaryHeader'
 import { PrimaryDescription } from '../components/Description'
-import testimonial from '../assets/Resources/testimonial.png'
+import Scroll from '../components/Scroll'
+import testimonial from '../assets/Resources/testimonials.jpg'
 
 const Testimonials = () => {
   return (
     <div className='relative my-10 flex flex-col items-center justify-center'>
+      <Scroll />
       <GradientPrimaryHeader 
       content="Testimonials"/>
       <div className='flex mx-5 md:mx-20 mt-10 lg:mt-16 gap-10 flex-col lg:flex-row items-center justify-center'>

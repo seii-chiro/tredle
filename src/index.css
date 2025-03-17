@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'tailwindcss';
 
 html {
     scroll-behavior: smooth;
@@ -26,14 +26,79 @@ a.active {
     @apply pl-3 lg:pl-0 border-l-4 lg:border-l-0 lg:underline decoration-4 underline-offset-8 text-[#1E365D] font-bold;
 }
 
+footer a {
+    @apply hover:text-[#1E365D];
+}
+
 @layer utilities {
     .shadow-all-sides {
         @apply shadow-md;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -4px 6px rgba(0, 0, 0, 0.1),
-        4px 0 6px rgba(0, 0, 0, 0.1), -4px 0 6px rgba(0, 0, 0, 0.1);
+        box-shadow:
+            0 4px 6px rgba(0, 0, 0, 0.1),
+            0 -4px 6px rgba(0, 0, 0, 0.1),
+            4px 0 6px rgba(0, 0, 0, 0.1),
+            -4px 0 6px rgba(0, 0, 0, 0.1);
     }
 
     .navy-blue-text {
         @apply text-[#1E365D];
     }
+
+    .bg-navy-blue {
+        @apply bg-[#1E365D];
+    }
+
+    .bg-gradient {
+        @apply bg-gradient-to-r from-[#32384E] via-[#332036] to-[#742822];
+    }
+}
+
+
+@keyframes logoPulse {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+
+@keyframes rippleInner {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+
+@keyframes rippleOuter {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+.ripple-image {
+    animation: logoPulse 1.5s ease-in-out infinite;
+}
+
+.ripple-inner {
+    animation: rippleInner 1.5s ease-out infinite;
+}
+
+.ripple-outer {
+    animation: rippleOuter 1.5s ease-out infinite;
+    animation-delay: 0.4s; 
 }

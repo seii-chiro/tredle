@@ -19,7 +19,7 @@ export const WideNavbar = () => {
     return (
         <div className="hidden h-full lg:flex items-center">
             <nav className="h-full [&_a:hover]:text-[#1E365D] [&_a:active]:text-[#1E365D]">
-                <ul className="flex justify-center items-center gap-6 h-full text-center">
+                <ul className="flex justify-center items-center gap-2 xl:gap-6 h-full text-center">
                     <li className="h-full">
                         <NavLink
                             onFocus={() => {
@@ -76,9 +76,9 @@ export const WideNavbar = () => {
                                     onMouseEnter={() => setIsAboutHovered(true)}
                                     onMouseLeave={() => setIsAboutHovered(false)}
                                 >
-                                    <ul className="text-nowrap flex flex-col text-left w-full">
+                                    <ul className="text-nowrap flex flex-col text-left w-full p-2">
                                         <li
-                                            className={`hover:bg-gray-300 p-3 border-b-1 border-gray-200 ${activeDropdown === 'About Us' && 'navy-blue-text font-bold'}`}
+                                            className={`hover:bg-gray-300 p-3 ${activeDropdown === 'About Us' && 'navy-blue-text font-bold'}`}
                                         >
                                             <Link
                                                 onFocus={() => setIsAboutHovered(true)}
@@ -93,7 +93,7 @@ export const WideNavbar = () => {
                                             </Link>
                                         </li>
                                         <li
-                                            className={`hover:bg-gray-300 p-3 border-b-1 border-gray-200 ${activeDropdown === 'Background/History' && 'navy-blue-text font-bold'}`}
+                                            className={`hover:bg-gray-300 p-3  ${activeDropdown === 'Background/History' && 'navy-blue-text font-bold'}`}
                                         >
                                             <Link
                                                 onFocus={() => setIsAboutHovered(true)}
@@ -106,7 +106,7 @@ export const WideNavbar = () => {
                                                 Background/History
                                             </Link>
                                         </li>
-                                        <li className="hover:bg-gray-300 p-3 border-b-1 border-gray-200">
+                                        <li className="hover:bg-gray-300 p-3">
                                             <div>
                                                 <Link
                                                     className={`${activeDropdown === 'Mission' && 'navy-blue-text font-bold'}`}
@@ -215,7 +215,7 @@ export const WideNavbar = () => {
                                                     onFocus={() =>
                                                         setTrainingCategoriesIsHovered(false)
                                                     }
-                                                    to="/programs#faculty-and-certified-training-instructor"
+                                                    to="/programs/faculty-and-certified-training-instructor"
                                                     onClick={() => {
                                                         setActiveDropdown(
                                                             'Faculty and Certified Training Instructors'
@@ -270,7 +270,7 @@ export const WideNavbar = () => {
                                                     onFocus={() =>
                                                         setTrainingCategoriesIsHovered(false)
                                                     }
-                                                    to="/programs#certification-programs"
+                                                    to="/programs/certification-programs"
                                                     id="certification-programs"
                                                     onClick={() => {
                                                         setActiveTrainingOption(null)
@@ -281,13 +281,30 @@ export const WideNavbar = () => {
                                                 </Link>
                                             </li>
                                             <li
+                                                className={`hover:bg-gray-300 p-2 ${activeDropdown === 'Training Delivery Options' && 'navy-blue-text font-bold'}`}
+                                            >
+                                                <Link
+                                                    onFocus={() =>
+                                                        setTrainingCategoriesIsHovered(false)
+                                                    }
+                                                    to="/programs/training-delivery-options"
+                                                    id="training-delivery-options"
+                                                    onClick={() => {
+                                                        setActiveTrainingOption(null)
+                                                        setActiveDropdown('Training Delivery Options')
+                                                    }}
+                                                >
+                                                    Training Delivery Options
+                                                </Link>
+                                            </li>
+                                            <li
                                                 className={`hover:bg-gray-300 p-2 ${activeDropdown === 'Enrollment & Registration' && 'navy-blue-text font-bold'}`}
                                             >
                                                 <Link
                                                     onFocus={() =>
                                                         setTrainingCategoriesIsHovered(false)
                                                     }
-                                                    to="/programs#enrollment-and-registration"
+                                                    to="/programs/enrollment-and-registration"
                                                     onClick={() => {
                                                         setActiveTrainingOption(null)
                                                         setActiveDropdown(
@@ -305,7 +322,7 @@ export const WideNavbar = () => {
                                                     onFocus={() =>
                                                         setTrainingCategoriesIsHovered(false)
                                                     }
-                                                    to="/programs#atc-services"
+                                                    to="/programs/atc-services"
                                                     onClick={() => {
                                                         setActiveTrainingOption(null)
                                                         setActiveDropdown(
@@ -323,7 +340,7 @@ export const WideNavbar = () => {
                                                     onFocus={() =>
                                                         setTrainingCategoriesIsHovered(false)
                                                     }
-                                                    to="/programs#corporate-training-and-government-services"
+                                                    to="/programs/corporate-training-and-government-services"
                                                     onClick={() => {
                                                         setActiveTrainingOption(null)
                                                         setActiveDropdown(
@@ -341,7 +358,7 @@ export const WideNavbar = () => {
                                                     onFocus={() =>
                                                         setTrainingCategoriesIsHovered(false)
                                                     }
-                                                    to="/programs#learning-resources-and-knowledge-hub"
+                                                    to="/programs/learning-resources-and-knowledge-hub"
                                                     onClick={() => {
                                                         setActiveTrainingOption(null)
                                                         setActiveDropdown(
@@ -609,7 +626,7 @@ export const WideNavbar = () => {
                                                                                 '#certification-programs'
                                                                             )
                                                                         if (nextFocusableElement) {
-                                                                            ;(
+                                                                            ; (
                                                                                 nextFocusableElement as HTMLElement
                                                                             ).focus()
                                                                         }
@@ -767,7 +784,7 @@ export const MobileNavbar = () => {
                                     About
                                 </NavLink>
                                 <div
-                                    className="bg-red-500 h-full w-full flex justify-end"
+                                    className="h-full w-full flex justify-end"
                                     onClick={(e) => {
                                         e.preventDefault()
                                         e.stopPropagation()
@@ -888,7 +905,7 @@ export const MobileNavbar = () => {
                                     Programs
                                 </NavLink>
                                 <div
-                                    className="bg-red-500 h-full w-full flex justify-end"
+                                    className="h-full w-full flex justify-end"
                                     onClick={(e) => {
                                         e.preventDefault()
                                         e.stopPropagation()
@@ -909,7 +926,7 @@ export const MobileNavbar = () => {
                                             <Link
                                                 className={`block h-full w-full py-2 pl-10 ${activeDropdown === 'Faculty and Certified Instructors' && 'navy-blue-text font-bold'}`}
                                                 to={
-                                                    '/programs#faculty-and-certified-training-instructor'
+                                                    '/programs/faculty-and-certified-training-instructor'
                                                 }
                                                 onClick={() => {
                                                     setActiveTab('programs')
@@ -927,7 +944,7 @@ export const MobileNavbar = () => {
                                             <div className="flex items-center gap-1 h-full w-full">
                                                 <Link
                                                     className={`block h-full w-full py-2 pl-10 ${activeDropdown === 'Training Categories' && 'navy-blue-text font-bold'}`}
-                                                    to={'/about#background-history'}
+                                                    to={'/programs#training-categories'}
                                                     onClick={() => {
                                                         setActiveTab('programs')
                                                         setActiveDropdown('Training Categories')
@@ -938,7 +955,7 @@ export const MobileNavbar = () => {
                                                     Training Categories
                                                 </Link>
                                                 <div
-                                                    className="bg-red-500 h-full w-full flex justify-end"
+                                                    className="h-full w-full flex justify-end"
                                                     onClick={(e) => {
                                                         e.preventDefault()
                                                         e.stopPropagation()
@@ -947,7 +964,7 @@ export const MobileNavbar = () => {
                                                         )
                                                     }}
                                                 >
-                                                    {programsSubMenuOpen ? (
+                                                    {trainingCategoriesSubMenuOpen ? (
                                                         <MdKeyboardArrowUp
                                                             size={20}
                                                             className="mr-4"
@@ -1215,7 +1232,7 @@ export const MobileNavbar = () => {
                                         <li>
                                             <Link
                                                 className={`block h-full w-full py-2 pl-10 ${activeDropdown === 'Certification Programs' && 'navy-blue-text font-bold'}`}
-                                                to={'/programs#certification-programs'}
+                                                to={'/programs/certification-programs'}
                                                 onClick={() => {
                                                     setActiveTab('programs')
                                                     setActiveDropdown('Certification Programs')
@@ -1229,7 +1246,7 @@ export const MobileNavbar = () => {
                                         <li>
                                             <Link
                                                 className={`block h-full w-full py-2 pl-10 ${activeDropdown === 'Training Delivery Options' && 'navy-blue-text font-bold'}`}
-                                                to={'/programs#training-delivery-options'}
+                                                to={'/programs/training-delivery-options'}
                                                 onClick={() => {
                                                     setActiveTab('programs')
                                                     setActiveDropdown('Training Delivery Options')
@@ -1243,7 +1260,7 @@ export const MobileNavbar = () => {
                                         <li>
                                             <Link
                                                 className={`block h-full w-full py-2 pl-10 ${activeDropdown === 'Enrollment & Registration' && 'navy-blue-text font-bold'}`}
-                                                to={'/programs#enrollment-and-registration'}
+                                                to={'/programs/enrollment-and-registration'}
                                                 onClick={() => {
                                                     setActiveTab('programs')
                                                     setActiveDropdown('Enrollment & Registration')
@@ -1257,7 +1274,7 @@ export const MobileNavbar = () => {
                                         <li>
                                             <Link
                                                 className={`block h-full w-full py-2 pl-10 ${activeDropdown === 'Authorized Testing Center (ATC) Services' && 'navy-blue-text font-bold'}`}
-                                                to={'/programs#atc-services'}
+                                                to={'/programs/atc-services'}
                                                 onClick={() => {
                                                     setActiveTab('programs')
                                                     setActiveDropdown(
@@ -1274,7 +1291,7 @@ export const MobileNavbar = () => {
                                             <Link
                                                 className={`block h-full w-full py-2 pl-10 ${activeDropdown === 'Corporate Training & Government Partnerships' && 'navy-blue-text font-bold'}`}
                                                 to={
-                                                    '/programs#corporate-training-and-government-services'
+                                                    '/programs/corporate-training-and-government-services'
                                                 }
                                                 onClick={() => {
                                                     setActiveTab('programs')
@@ -1292,7 +1309,7 @@ export const MobileNavbar = () => {
                                             <Link
                                                 className={`block h-full w-full py-2 pl-10 ${activeDropdown === 'Learning Resources & Knowledge Hub' && 'navy-blue-text font-bold'}`}
                                                 to={
-                                                    '/programs#learning-resources-and-knowledge-hub'
+                                                    '/programs/learning-resources-and-knowledge-hub'
                                                 }
                                                 onClick={() => {
                                                     setActiveTab('programs')

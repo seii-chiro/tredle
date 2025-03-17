@@ -7,6 +7,13 @@ import Accreditation_Partnership from "./pages/Accreditation_Partnership"
 import Testimonials from "./pages/Testimonials"
 import Events_Webinars from "./pages/Events_Webinars"
 import ContactUs from "./pages/ContactUs"
+import ATC from "./pages/ATC"
+import CTGP from "./pages/CTGP"
+import LRKH from "./pages/LRKH"
+import Certification from "./pages/Certification"
+import Enrollment from "./pages/Enrollment"
+import Training_Delivery from "./pages/Training_Delivery"
+import Faculty from "./pages/Faculty"
 
 function App() {
 
@@ -47,6 +54,34 @@ function App() {
           path: "contact-us",
           element: <ContactUs />
         },
+        {
+          path: "programs/faculty-and-certified-training-instructor",
+          element: <Faculty />
+        },
+        {
+          path: "programs/certification-programs",
+          element: <Certification />
+        },
+        {
+          path: "/programs/training-delivery-options",
+          element: <Training_Delivery />
+        },
+        {
+          path: "/programs/enrollment-and-registration",
+          element: <Enrollment />
+        },
+        {
+          path: "programs/atc-services",
+          element: <ATC />
+        },
+        {
+          path: "programs/corporate-training-and-government-services",
+          element: <CTGP />
+        },
+        {
+          path: "programs/learning-resources-and-knowledge-hub",
+          element: <LRKH />
+        }
       ]
     }
   ])

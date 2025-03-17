@@ -15,9 +15,10 @@ const Footer = () => {
           </section>
 
           <div className="flex-2 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 px-10">
+
             <section className="flex flex-[1.5] flex-col gap-4 lg:items-center justify-center p-5 w-full">
-              <h4 className="w-full text-center md:text-left">Connect with us</h4>
-              <div className="flex flex-col gap-2">
+              <h4 className="w-full text-center lg:pl-20 md:text-left h-[30%] font-bold">Connect with us</h4>
+              <div className="flex flex-col gap-2 h-[70%]">
                 <div className="flex gap-3 items-center">
                   <BsTelephoneFill />
                   <p>+63 995 539 2499 | +63 995 539 2500</p>
@@ -35,11 +36,11 @@ const Footer = () => {
               </div>
             </section>
 
-            <section className="flex-1 flex items-center md:items-start lg:items-center justify-center w-full p-5">
-              <div className="flex flex-col gap-4 items-center lg:items-center justify-center w-full">
-                <h4 className="text-center md:text-left w-full text-nowrap">Quick Links</h4>
-                <div className="w-full">
-                  <ul className="grid grid-cols-2 md:grid-cols-1 text-center md:text-left">
+            <section className="flex-1 flex items-center md:items-start lg:items-center justify-center w-full h-full p-5">
+              <div className="flex flex-col items-center lg:items-center justify-center w-full h-full">
+                <h4 className="text-center md:text-left w-full text-nowrap h-[30%] font-bold">Quick Links</h4>
+                <div className="w-full h-[70%]">
+                  <ul className="grid grid-cols-2 md:grid-cols-1 text-center md:text-left gap-1">
                     <li><Link to={"/programs/certification-programs"}>Courses</Link></li>
                     <li><Link to={"/programs/certification-programs"}>Certifications</Link></li>
                     <li><Link to={"/events-and-webinars"}>Events</Link></li>

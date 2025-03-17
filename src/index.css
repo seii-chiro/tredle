@@ -7,7 +7,7 @@ html {
 
 body,
 #root {
-    @apply min-h-screen w-full box-border font-['Poppins',inter] transition-all ease-in-out duration-150;
+    @apply min-h-screen w-full box-border font-['Poppins',inter] transition-all ease-in-out duration-150 text-[#333];
 }
 
 a,
@@ -27,7 +27,7 @@ a.active {
 }
 
 footer a {
-    @apply hover:text-[#1E365D];
+    @apply hover:text-[#333];
 }
 
 @layer utilities {
